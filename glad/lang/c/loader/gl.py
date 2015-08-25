@@ -173,7 +173,7 @@ _FIND_VERSION = '''
     }
 
 /* PR #18 */
-#ifdef _MSC_VER
+#ifdef __STDC_WANT_SECURE_LIB__
     sscanf_s(version, "%d.%d", &major, &minor);
 #else
     sscanf(version, "%d.%d", &major, &minor);
